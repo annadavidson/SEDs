@@ -82,9 +82,36 @@ print(flambda[0])
 #print(flambda)
 
 #for i in range(5):
-#    plt.scatter(g_wave, fnu[i])
+#    plt.scatter(g_wave, flambda[0])
+ 
+g_freq = (2.99*10**8)/(g_wave*(10**-10))   
+print (g_freq)
+
+#for i in range(5):
+#    plt.scatter(g_freq,fnu[i])
     
-    
+
+
+
+z = np.sqrt(g_freq**2 + fnu[0]**2)
+
+plt.subplot(321)
+plt.scatter(g_freq, fnu[0], s=80, c=z, marker=(5,1))
+
+plt.subplot(322)
+plt.scatter(g_freq, fnu[1], s=80, c=z, marker=(5, 1))
+
+plt.subplot(323)
+plt.scatter(g_freq, fnu[2], s=80, c=z, marker=(5, 1))
+
+plt.subplot(324)
+plt.scatter(g_freq, fnu[3], s=80, c=z, marker=(5,1))
+
+plt.subplot(325)
+plt.scatter(g_freq, fnu[4], s=80, c=z, marker=(5, 1))
+
+plt.show()
+
     
     
     
